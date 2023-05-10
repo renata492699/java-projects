@@ -19,7 +19,7 @@ public final class CsvToolkit {
      * @return parser
      */
     public static CsvParser parser() {
-        throw new UnsupportedOperationException("Implement this method!");
+        return new ParseData();
     }
 
     /**
@@ -30,6 +30,6 @@ public final class CsvToolkit {
      * @return parser
      */
     public static CsvParser parser(String delimiter, Charset charset) {
-        throw new UnsupportedOperationException("Implement this method!");
+        return new ParseData(delimiter, charset);
     }
 }
