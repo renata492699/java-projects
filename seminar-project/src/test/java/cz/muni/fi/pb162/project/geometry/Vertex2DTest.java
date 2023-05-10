@@ -64,7 +64,7 @@ public class Vertex2DTest {
     @Test
     public void checkToString() {
         //assertThat(vertex2D.toString()).isEqualTo("[" + X + ", " + Y + "]");
-        assertThat(vertex2D.toString()).matches(Pattern.compile("^\\[" + X + "0*, " + Y + "0*\\]$"));
+	assertThat(vertex2D.toString()).matches(Pattern.compile("^\\[" + X + "0*, " + Y + "0*\\]$"));
     }
 
     @Test

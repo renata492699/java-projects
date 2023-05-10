@@ -90,8 +90,7 @@ public class CollectionPolygon extends SimplePolygon{
         if (newArrayList.isEmpty()) {
             return null;
         }
-        int len = newArrayList.size();
-        Vertex2D[] arrayOfVertices = newArrayList.toArray(new Vertex2D[len]);
+        Vertex2D[] arrayOfVertices = newArrayList.toArray(new Vertex2D[0]);
         return new CollectionPolygon(arrayOfVertices);
     }
 
