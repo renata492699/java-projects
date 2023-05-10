@@ -5,11 +5,15 @@ package cz.muni.fi.pb162.hw01.impl.ciphers;
  */
 public interface Cipher {
 
+    String ALPHABET_MORSE =
+            "ABCDEFGHIJKLMNOPQRSTUVWXYZ" +
+            "0123456789" + ".,?!" +
+                    "abcdefghijklmnopqrstuvwxyz";
+
     String ALPHABET =
             "ABCDEFGHIJKLMNOPQRSTUVWXYZ" +
-            "abcdefghijklmnopqrstuvwxyz" +
-            "0123456789";
-
+                    "abcdefghijklmnopqrstuvwxyz" +
+                    "0123456789";
     /**
      * Encrypts given plain text using this cipher
      *

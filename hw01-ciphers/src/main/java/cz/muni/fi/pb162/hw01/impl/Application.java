@@ -56,8 +56,27 @@ public class Application {
      * Application runtime logic
      */
     private void run() {
-        // TODO: Remove the following lines and implement the functionality
-        System.err.println("Not implemented yet!");
-        System.exit(2);
+        if (cipherType == CipherType.MORSE_CODE) {
+            MorseCode cipher = new MorseCode();
+            if (operation == Operation.DECRYPT) {
+                System.out.println(cipher.decrypt(text));
+            } else {
+                System.out.println(cipher.encrypt(text));
+            }
+        } else if (cipherType == CipherType.CAESAR) {
+            CaesarCipher cipher = new CaesarCipher(caesarShift);
+            if (operation == Operation.DECRYPT) {
+                System.out.println(cipher.decrypt(text));
+            } else {
+                System.out.println(cipher.encrypt(text));
+            }
+        } else {
+            VigenereCipher cipher = new VigenereCipher(vigenereKey);
+            if (operation == Operation.DECRYPT) {
+                System.out.println(cipher.decrypt(text));
+            } else {
+                System.out.println(cipher.encrypt(text));
+            }
+        }
     }
 }
